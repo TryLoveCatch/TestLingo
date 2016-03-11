@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.WindowManager;
 
+import cn.lingox.android.bin.guide.GuideActivity;
 import cn.lingox.android.framework.BaseActivity;
 
 public class FirstActivity extends BaseActivity{
@@ -41,14 +42,23 @@ public class FirstActivity extends BaseActivity{
     //===============对外方法==============
     //===============私有方法==============
     private void loadData(){
+        //这里需要判断登录
         mHandler.postDelayed(new Runnable() {
-            
             @Override
             public void run() {
-                Intent tIntent = new Intent(FirstActivity.this, MainActivity.class);
+                Intent tIntent = new Intent(FirstActivity.this, GuideActivity.class);
                 startActivity(tIntent);
                 finish();
             }
-        }, 3000);
+        }, 1500);
+//        mHandler.postDelayed(new Runnable() {
+//
+//            @Override
+//            public void run() {
+//                Intent tIntent = new Intent(FirstActivity.this, MainActivity.class);
+//                startActivity(tIntent);
+//                finish();
+//            }
+//        }, 3000);
     }
 }

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\lipeng21\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="D:\my\TestLingo\app\build\intermediates\pre-dexed\debug\picasso-2.5.2-3ff9413ee28d0c9490c1a49f5dca1ced2b2144fd.jar" />
+    </item>
+    <item
+        jar="C:\Users\lipeng21\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.3.1\ecb6e1f8e4b0e84c4b886c2f14a1500caf309757\gson-2.3.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
+        <dex dex="D:\my\TestLingo\app\build\intermediates\pre-dexed\debug\gson-2.3.1-964b1edb0a3dfe5d1aaee3db3cf4e25491985037.jar" />
+    </item>
+    <item
+        jar="C:\Users\lipeng21\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit\adapter-rxjava\2.0.0-beta2\3a233746381a03dbb0f5f3ed10b11c3e72dba499\adapter-rxjava-2.0.0-beta2.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3a233746381a03dbb0f5f3ed10b11c3e72dba499">
+        <dex dex="D:\my\TestLingo\app\build\intermediates\pre-dexed\debug\adapter-rxjava-2.0.0-beta2-e09c3176b43d0a0982ae1d8be70c75863d5a9671.jar" />
+    </item>
+    <item
+        jar="D:\my\TestLingo\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\libs\internal_impl-23.1.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
+        <dex dex="D:\my\TestLingo\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.0-88ca6a3b9d6d2a7b7af3514a4f76255a5d7a73cb.jar" />
+    </item>
+    <item
+        jar="D:\my\TestLingo\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d96886efea7cc74fbb3abd0e3b51d5638fc57be0">
+        <dex dex="D:\my\TestLingo\app\build\intermediates\pre-dexed\debug\classes-d28276e276345db6b7e778d7b43ed31fe83ea904.jar" />
+    </item>
+    <item
+        jar="C:\Users\lipeng21\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife\7.0.1\d5d13ea991eab0252e3710e5df3d6a9d4b21d461\butterknife-7.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
+        <dex dex="D:\my\TestLingo\app\build\intermediates\pre-dexed\debug\butterknife-7.0.1-3690afe267e3816555c31cd4147136434b16f7ef.jar" />
+    </item>
+    <item
+        jar="C:\Users\lipeng21\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit\converter-gson\2.0.0-beta2\392c3d09e0f5e7087544093cc0cb23bb9c7af5fa\converter-gson-2.0.0-beta2.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="392c3d09e0f5e7087544093cc0cb23bb9c7af5fa">
+        <dex dex="D:\my\TestLingo\app\build\intermediates\pre-dexed\debug\converter-gson-2.0.0-beta2-5f9543bd6dddd73877384f13069329c4d63d5af6.jar" />
+    </item>
+    <item
+        jar="C:\Users\lipeng21\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp\okhttp\2.5.0\4de2b4ed3445c37ec1720a7d214712e845a24636\okhttp-2.5.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4de2b4ed3445c37ec1720a7d214712e845a24636">
+        <dex dex="D:\my\TestLingo\app\build\intermediates\pre-dexed\debug\okhttp-2.5.0-766ca3a22e38fac2678b81f9709f77ff07c42b9d.jar" />
+    </item>
+    <item
+        jar="D:\my\TestLingo\app\libs\lite-orm-1.5.4.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="0f5370e78aa3b794217ff5670998f514262b9d63">
+        <dex dex="D:\my\TestLingo\app\build\intermediates\pre-dexed\debug\lite-orm-1.5.4-c705bf01b6f9e11ca96fb18a8e0ec42cdca1f608.jar" />
+    </item>
+    <item
+        jar="C:\Users\lipeng21\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.6.0\98476622f10715998eacf9240d6b479f12c66143\okio-1.6.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="D:\my\TestLingo\app\build\intermediates\pre-dexed\debug\okio-1.6.0-02d57e0d3819a71a8c23a01dd881b868214e85db.jar" />
+    </item>
+    <item
+        jar="C:\Users\lipeng21\.gradle\caches\modules-2\files-2.1\io.reactivex\rxjava\1.0.15\f0ab8b7c8010cad33b8debda5d09d233571dc486\rxjava-1.0.15.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="f0ab8b7c8010cad33b8debda5d09d233571dc486">
+        <dex dex="D:\my\TestLingo\app\build\intermediates\pre-dexed\debug\rxjava-1.0.15-bf91435d25daa8e9ae20de1f23d967d50cd58ba6.jar" />
+    </item>
+    <item
+        jar="D:\my\TestLingo\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
+        <dex dex="D:\my\TestLingo\app\build\intermediates\pre-dexed\debug\classes-dff35484dfc06e09e4db93e31a55c4b7c4a3c0e6.jar" />
+    </item>
+    <item
+        jar="D:\my\TestLingo\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
+        <dex dex="D:\my\TestLingo\app\build\intermediates\pre-dexed\debug\classes-8a65be226a59db7dc2835a753a20bd184f7438fa.jar" />
+    </item>
+    <item
+        jar="C:\Users\lipeng21\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit\retrofit\2.0.0-beta2\880d9e0997b2d1bfc98e0d121ced33ee5d04aac4\retrofit-2.0.0-beta2.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="880d9e0997b2d1bfc98e0d121ced33ee5d04aac4">
+        <dex dex="D:\my\TestLingo\app\build\intermediates\pre-dexed\debug\retrofit-2.0.0-beta2-b13e6a685c35c97849effddd73cca107a4289ffa.jar" />
+    </item>
+    <item
+        jar="D:\my\TestLingo\app\build\intermediates\exploded-aar\com.android.support\design\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="19026d31f5d3ae868db81319671a642be5fbba08">
+        <dex dex="D:\my\TestLingo\app\build\intermediates\pre-dexed\debug\classes-b57466f8b6315ece8a25d0a16f4e5d497590f483.jar" />
+    </item>
+    <item
+        jar="D:\my\TestLingo\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
+        <dex dex="D:\my\TestLingo\app\build\intermediates\pre-dexed\debug\classes-2551beb4cdb8833c17b3f133bff28146f44dd16b.jar" />
+    </item>
+    <item
+        jar="D:\my\TestLingo\app\build\intermediates\exploded-aar\io.reactivex\rxandroid\1.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="aa81bfe8c5cc88c2472ca936ae71f0c3dd1766df">
+        <dex dex="D:\my\TestLingo\app\build\intermediates\pre-dexed\debug\classes-a3106ac5aff6bf8345c38ad8eb0a6c89353374c6.jar" />
+    </item>
+    <item
+        jar="C:\Users\lipeng21\.gradle\caches\modules-2\files-2.1\de.greenrobot\eventbus\2.4.0\ddd166d01b3158d1c00576d29f7ed15c030df719\eventbus-2.4.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ddd166d01b3158d1c00576d29f7ed15c030df719">
+        <dex dex="D:\my\TestLingo\app\build\intermediates\pre-dexed\debug\eventbus-2.4.0-ad7443f5bd314fb5be4dad7bf1048180d8f0e8b3.jar" />
+    </item>
+    <item
+        jar="D:\android\android-sdk-windows\extras\android\m2repository\com\android\support\support-annotations\23.1.0\support-annotations-23.1.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
+        <dex dex="D:\my\TestLingo\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.0-f6c56e06a7f122c4ca7db938c383ac106110028b.jar" />
+    </item>
+
+</items>

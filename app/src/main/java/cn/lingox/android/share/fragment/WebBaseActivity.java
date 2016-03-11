@@ -20,8 +20,8 @@ import cn.lingox.android.util.UtilString;
 public class WebBaseActivity extends BaseActivity  {
 
     //===============界面变量==============
-    @Bind(R.id.toolbar)
-    Toolbar mToolbar;
+//    @Bind(R.id.toolbar)
+//    Toolbar mToolbar;
 //    @Bind(R.id.fab)
 //    FloatingActionButton mFab;
 

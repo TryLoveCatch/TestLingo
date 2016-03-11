@@ -23,7 +23,15 @@ import cn.lingox.android.framework.BaseFragment;
 public class SharedFragmentActivity extends BaseActivity {
 
     public static final String INTENT_FRAGMENT_NAME = "intent_fragment_name";
-    
+    public static final String INTENT_SHOW_TOOLBAR = "intent_show_toolbar";
+
+
+    public static void startFragmentActivity(Context context, Class<? extends BaseFragment> fragmentClass, boolean isShowToolbar) {
+        Intent intent = new Intent(context, SharedFragmentActivity.class);
+        intent.putExtra(INTENT_FRAGMENT_NAME, fragmentClass);
+        intent.putExtra(INTENT_SHOW_TOOLBAR ,isShowToolbar);
+        context.startActivity(intent);
+    }
     /**
      * 启动一个fragment
      * 
@@ -83,7 +91,11 @@ public class SharedFragmentActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.content_frame);
+        if(getIntent().getBooleanExtra(INTENT_SHOW_TOOLBAR, false)){
+            setContentView(R.layout.content_frame_toolbar);
+        }else {
+            setContentView(R.layout.content_frame);
+        }
 
         Class<? extends BaseFragment> fragmentClass = (Class<? extends BaseFragment>)getIntent().getSerializableExtra(INTENT_FRAGMENT_NAME);
         if (fragmentClass != null) {
@@ -104,8 +116,8 @@ public class SharedFragmentActivity extends BaseActivity {
     
     @Override
     public void initViewProperty() {
-        // TODO Auto-generated method stub
-        
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     @Override

@@ -12,8 +12,15 @@
 
     <string name="transition_share_photo">transition:PHOTO</string>
 
-    <!-- google admob广告id -->
-    <string name="banner_ad_google_id">ca-app-pub-3940256099942544/6300978111</string>
-    <!-- facebook audience network 广告id -->
-    <string name="banner_ad_facebook_id">1053431274680044_1053434978013007</string>
+
+    <string name="guide_msg">欢迎您的使用\n哈哈哈</string>
+    <string name="login">登录</string>
+    <string name="regist">注册</string>
+
+
+    <string name="user_login_name_hint">UserName or Email</string>
+    <string name="user_login_name_error_null">UserName or Email is null</string>
+    <string name="user_login_password_hint">Passowrd</string>
+    <string name="user_login_password_error_null">password is null</string>
+
 </resources>

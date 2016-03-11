@@ -9,6 +9,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -39,6 +40,9 @@ public abstract class BaseActivity extends AppCompatActivity implements IUI, OnN
     @Nullable
     @Bind(R.id.emptyView)
     protected EmptyView mEmptyView;
+    @Nullable
+    @Bind(R.id.toolbar)
+    protected Toolbar mToolbar;
 	// ================逻辑相关=====================
 	/**
 	 * 销毁时通知DataTask cancel的观察者
@@ -266,8 +270,9 @@ public abstract class BaseActivity extends AppCompatActivity implements IUI, OnN
     protected void showToast(int resId) {
         T.showShort(this, resId);
     }
-    
-    public boolean isListValid(List<?> plist){
+
+    protected boolean isListValid(List<?> plist){
     	return plist!=null && plist.size() > 0;
     }
+
 }
