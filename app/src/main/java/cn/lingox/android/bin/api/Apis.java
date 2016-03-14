@@ -1,8 +1,9 @@
-package cn.lingox.android.bin.net;
+package cn.lingox.android.bin.api;
 
 import cn.lingox.android.bin.detail.InfoDetail;
 import cn.lingox.android.bin.meizi.info.InfoMeiziData;
 import retrofit.http.GET;
+import retrofit.http.POST;
 import retrofit.http.Path;
 import rx.Observable;
 
@@ -32,7 +33,11 @@ public interface Apis {
 //    Observable<InfoMeiziData> getMeizi(@Path("page") int pPage, @Path("pageSize") int pPageSize);
 //    Call<InfoMeizi> getMeizi(@Path("page") int pPage);
 
-    @GET("data/{type}/{pageSize}/{page}")
-    Observable<InfoMeiziData> getDataByType(@Path("page") int pPage, @Path("pageSize") int pPageSize, @Path("type") String pType);
+//    @GET("data/{type}/{pageSize}/{page}")
+//    Observable<InfoMeiziData> getDataByType(@Path("page") int pPage, @Path("pageSize") int pPageSize, @Path("type") String pType);
 
+
+
+    @POST("api/v1/users/login")
+    Observable<InfoMeiziData> getDataByType();
 }

@@ -15,7 +15,7 @@ import java.util.List;
 import butterknife.Bind;
 import cn.lingox.android.R;
 import cn.lingox.android.bin.meizi.MeiziManager;
-import cn.lingox.android.bin.net.Apis;
+import cn.lingox.android.bin.api.Apis;
 import cn.lingox.android.bin.photo.adapter.PhotoPagerAdapter;
 import cn.lingox.android.dao.InfoDaoMeizi;
 import cn.lingox.android.framework.BaseActivity;

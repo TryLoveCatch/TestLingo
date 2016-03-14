@@ -3,7 +3,7 @@ package cn.lingox.android.bin.detail;
 import java.util.Calendar;
 import java.util.Date;
 
-import cn.lingox.android.bin.net.ApiManager;
+import cn.lingox.android.bin.api.ApiManager;
 import cn.lingox.android.framework.event.EventBus;
 import cn.lingox.android.share.event.EventDetail;
 import rx.Subscription;

@@ -1,4 +1,4 @@
-package cn.lingox.android.bin.net;
+package cn.lingox.android.bin.api;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -19,7 +19,7 @@ public class ApiRetrofit {
     private final static long readTimeout = 10 * 1000;
     private final static long writeTimeout = 10 * 1000;
 
-    private final static String URL_BASE = "http://gank.avosapps.com/api/";
+    private final static String URL_BASE = "http://www.lingox.cn/";
 
 
     private Apis apis;

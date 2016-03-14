@@ -8,7 +8,7 @@ import java.text.SimpleDateFormat;
 
 import butterknife.Bind;
 import cn.lingox.android.R;
-import cn.lingox.android.bin.net.Apis;
+import cn.lingox.android.bin.api.Apis;
 import cn.lingox.android.framework.data.InfoBase;
 import cn.lingox.android.framework.event.EventBus;
 import cn.lingox.android.framework.view.BaseHolderView;

@@ -18,7 +18,7 @@ import android.view.View;
 import butterknife.Bind;
 import cn.lingox.android.bin.home.HomeFragment;
 import cn.lingox.android.bin.meizi.MeiziFragment;
-import cn.lingox.android.bin.net.Apis;
+import cn.lingox.android.bin.api.Apis;
 import cn.lingox.android.bin.text.TextFragment;
 import cn.lingox.android.bin.video.VideoFragment;
 import cn.lingox.android.framework.BaseActivity;

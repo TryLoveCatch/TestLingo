@@ -1,6 +1,6 @@
 package cn.lingox.android.framework;
 
-import android.app.ProgressDialog;
+import android.app.Dialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -17,6 +17,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import cn.lingox.android.R;
 import cn.lingox.android.share.view.EmptyView;
+import cn.lingox.android.share.view.PhoneProgressDialog;
 import cn.lingox.android.util.T;
 import rx.Subscription;
 
@@ -229,13 +230,16 @@ public abstract class BaseFragment extends Fragment implements IUI {
     protected boolean isListValid(List<?> plist){
     	return plist!=null && plist.size() > 0;
     }
-    private ProgressDialog mProgress;
+
+    private Dialog mProgress;
+    protected void showProgress() {
+        showProgress(null);
+    }
     protected void showProgress(String tMsg) {
 		if(mProgress==null){
-//			mProgress = DialogUtil.createProgressDialog(getActivity(), null,
-//					tMsg, null, false);
+			mProgress = PhoneProgressDialog.createProgressDialog(getActivity(), false);
 		}
-		mProgress.setMessage(tMsg);
+		mProgress.setTitle(tMsg);
 		mProgress.show();
 	}
     protected void hideProgress(){

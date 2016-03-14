@@ -13,6 +13,11 @@
     <string name="transition_share_photo">transition:PHOTO</string>
 
 
+    <string name="app_login">Login</string>
+    <string name="app_regist">Regist</string>
+
+
+
     <string name="guide_msg">欢迎您的使用\n哈哈哈</string>
     <string name="login">登录</string>
     <string name="regist">注册</string>
@@ -22,5 +27,11 @@
     <string name="user_login_name_error_null">UserName or Email is null</string>
     <string name="user_login_password_hint">Passowrd</string>
     <string name="user_login_password_error_null">password is null</string>
+
+
+
+    <string name="progress_msg_default">Loading, Please wait...</string>
+    <string name="progress_msg_login">User Logining, Please wait...</string>
+
 
 </resources>

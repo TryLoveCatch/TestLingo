@@ -10,7 +10,7 @@ import java.util.List;
 
 import cn.lingox.android.R;
 import cn.lingox.android.bin.meizi.view.MeiziHView;
-import cn.lingox.android.bin.net.Apis;
+import cn.lingox.android.bin.api.Apis;
 import cn.lingox.android.bin.photo.PhotoFragment;
 import cn.lingox.android.dao.InfoDaoMeizi;
 import cn.lingox.android.framework.data.InfoBase;

@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.app.FragmentManager;
+import android.view.Gravity;
+import android.view.MenuItem;
 import android.view.View;
 
 import cn.lingox.android.R;
@@ -90,11 +92,10 @@ public class SharedFragmentActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub
-        super.onCreate(savedInstanceState);
         if(getIntent().getBooleanExtra(INTENT_SHOW_TOOLBAR, false)){
-            setContentView(R.layout.content_frame_toolbar);
+            super.onCreate(savedInstanceState, R.layout.content_frame_toolbar);
         }else {
-            setContentView(R.layout.content_frame);
+            super.onCreate(savedInstanceState, R.layout.content_frame);
         }
 
         Class<? extends BaseFragment> fragmentClass = (Class<? extends BaseFragment>)getIntent().getSerializableExtra(INTENT_FRAGMENT_NAME);
@@ -113,11 +114,25 @@ public class SharedFragmentActivity extends BaseActivity {
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch (id){
+            case android.R.id.home:
+                onBackPressed();
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
     
     @Override
     public void initViewProperty() {
-        setSupportActionBar(mToolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        if(mToolbar!=null) {
+            setSupportActionBar(mToolbar);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
     }
 
     @Override

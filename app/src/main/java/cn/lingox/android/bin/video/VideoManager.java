@@ -11,8 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cn.lingox.android.bin.meizi.info.InfoMeiziData;
-import cn.lingox.android.bin.net.ApiManager;
-import cn.lingox.android.bin.net.Apis;
+import cn.lingox.android.bin.api.ApiManager;
+import cn.lingox.android.bin.api.Apis;
 import cn.lingox.android.dao.DaoManager;
 import cn.lingox.android.dao.InfoDaoMeizi;
 import cn.lingox.android.dao.InfoDaoVideo;

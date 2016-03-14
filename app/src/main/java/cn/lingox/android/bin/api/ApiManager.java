@@ -1,4 +1,4 @@
-package cn.lingox.android.bin.net;
+package cn.lingox.android.bin.api;
 
 /**
  * Created by lipeng21 on 2015/11/9.
