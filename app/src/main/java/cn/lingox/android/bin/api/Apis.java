@@ -2,9 +2,12 @@ package cn.lingox.android.bin.api;
 
 import cn.lingox.android.bin.detail.InfoDetail;
 import cn.lingox.android.bin.meizi.info.InfoMeiziData;
-import retrofit.http.GET;
-import retrofit.http.POST;
-import retrofit.http.Path;
+import cn.lingox.android.bin.user.info.InfoUser;
+import retrofit2.http.Field;
+import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
+import retrofit2.http.POST;
+import retrofit2.http.Path;
 import rx.Observable;
 
 /**
@@ -13,6 +16,8 @@ import rx.Observable;
 public interface Apis {
 
     int PAGESIZE = 20;
+    String emailOrUsernameStr = "emailOrUsername";
+    String passwordStr = "password";
 
     String type_meizi = "福利";
     String type_video = "休息视频";
@@ -33,11 +38,13 @@ public interface Apis {
 //    Observable<InfoMeiziData> getMeizi(@Path("page") int pPage, @Path("pageSize") int pPageSize);
 //    Call<InfoMeizi> getMeizi(@Path("page") int pPage);
 
-//    @GET("data/{type}/{pageSize}/{page}")
-//    Observable<InfoMeiziData> getDataByType(@Path("page") int pPage, @Path("pageSize") int pPageSize, @Path("type") String pType);
+    @GET("data/{type}/{pageSize}/{page}")
+    Observable<InfoMeiziData> getDataByType(@Path("page") int pPage, @Path("pageSize") int pPageSize, @Path("type") String pType);
 
 
 
+    @FormUrlEncoded
     @POST("api/v1/users/login")
-    Observable<InfoMeiziData> getDataByType();
+    Observable<InfoUser> login(@Field(emailOrUsernameStr)String  emailOrUsername
+                    , @Field(passwordStr)String  password);
 }

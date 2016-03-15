@@ -2,13 +2,15 @@ package cn.lingox.android.bin.api;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.squareup.okhttp.OkHttpClient;
 
 import java.util.concurrent.TimeUnit;
 
-import retrofit.GsonConverterFactory;
-import retrofit.Retrofit;
-import retrofit.RxJavaCallAdapterFactory;
+import cn.lingox.android.BuildConfig;
+import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
+import retrofit2.GsonConverterFactory;
+import retrofit2.Retrofit;
+import retrofit2.RxJavaCallAdapterFactory;
 
 /**
  * Created by lipeng21 on 2015/11/9.
@@ -25,10 +27,17 @@ public class ApiRetrofit {
     private Apis apis;
 
     ApiRetrofit() {
-        OkHttpClient tClient = new OkHttpClient();
-        tClient.setReadTimeout(connectTimeout, TimeUnit.MILLISECONDS);
-        tClient.setReadTimeout(readTimeout, TimeUnit.MILLISECONDS);
-        tClient.setReadTimeout(writeTimeout, TimeUnit.MILLISECONDS);
+        OkHttpClient.Builder tBuilder = new OkHttpClient.Builder();
+        tBuilder.connectTimeout(connectTimeout, TimeUnit.MILLISECONDS);
+        tBuilder.readTimeout(readTimeout, TimeUnit.MILLISECONDS);
+        tBuilder.writeTimeout(writeTimeout, TimeUnit.MILLISECONDS);
+        if (BuildConfig.DEBUG) {
+            HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
+            interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+            tBuilder.addInterceptor(interceptor);
+        }
+
+        OkHttpClient tClient = tBuilder.build();
 
         Gson tGson = new GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
                 .serializeNulls()

@@ -13,6 +13,7 @@ import butterknife.Bind;
 import cn.lingox.android.R;
 import cn.lingox.android.framework.BaseFragment;
 import cn.lingox.android.framework.event.EventBus;
+import cn.lingox.android.share.event.EventUserLogin;
 import cn.lingox.android.util.UtilString;
 
 public class UserLoginFragment extends BaseFragment implements View.OnClickListener {
@@ -81,6 +82,19 @@ public class UserLoginFragment extends BaseFragment implements View.OnClickListe
                 break;
         }
     }
+
+    public void onEvent(EventUserLogin pData){
+        hideProgress();
+        if(pData.data!=null){
+            showToast("Login success");
+        }else{
+            if(UtilString.isNotBlank(pData.resultMsg)){
+                showToast(pData.resultMsg);
+            }else {
+                showToast("Login failed");
+            }
+        }
+    }
     //===============对外方法==============
     //===============私有方法==============
     private void loadData(){
@@ -115,6 +129,8 @@ public class UserLoginFragment extends BaseFragment implements View.OnClickListe
     private void login(){
         if(checked()){
             showProgress(getString(R.string.progress_msg_login));
+            UserManager.getInstatnce().login(mTilName.getEditText().getText().toString()
+                    , mTilPassword.getEditText().getText().toString());
         }
     }
 

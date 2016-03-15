@@ -2,23 +2,23 @@ package cn.lingox.android.bin.video;
 
 import com.litesuits.orm.db.assit.QueryBuilder;
 import com.litesuits.orm.db.model.ConflictAlgorithm;
-import com.squareup.okhttp.OkHttpClient;
-import com.squareup.okhttp.Request;
-import com.squareup.okhttp.Response;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import cn.lingox.android.bin.meizi.info.InfoMeiziData;
 import cn.lingox.android.bin.api.ApiManager;
 import cn.lingox.android.bin.api.Apis;
+import cn.lingox.android.bin.meizi.info.InfoMeiziData;
 import cn.lingox.android.dao.DaoManager;
 import cn.lingox.android.dao.InfoDaoMeizi;
 import cn.lingox.android.dao.InfoDaoVideo;
 import cn.lingox.android.framework.event.EventBus;
 import cn.lingox.android.share.event.EventVideo;
 import cn.lingox.android.util.L;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action1;
