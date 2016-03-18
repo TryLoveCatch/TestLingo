@@ -6,7 +6,7 @@ import android.support.v7.widget.RecyclerView;
 
 import java.util.List;
 
-import cn.lingox.android.R;
+import cn.lingox.android.test.R;
 import cn.lingox.android.bin.video.view.VideoHView;
 import cn.lingox.android.dao.InfoDaoVideo;
 import cn.lingox.android.framework.data.InfoBase;

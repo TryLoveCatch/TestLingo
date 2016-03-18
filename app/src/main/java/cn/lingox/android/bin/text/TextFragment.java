@@ -7,7 +7,7 @@ import android.support.v7.widget.RecyclerView;
 
 import java.util.List;
 
-import cn.lingox.android.R;
+import cn.lingox.android.test.R;
 import cn.lingox.android.bin.text.view.TextHView;
 import cn.lingox.android.framework.data.InfoBase;
 import cn.lingox.android.share.event.EventText;

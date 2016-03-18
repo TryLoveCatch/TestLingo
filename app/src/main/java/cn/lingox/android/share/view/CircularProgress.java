@@ -17,7 +17,7 @@ import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.Interpolator;
 import android.view.animation.LinearInterpolator;
 
-import cn.lingox.android.R;
+import cn.lingox.android.test.R;
 
 public class CircularProgress extends View {
 

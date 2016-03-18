@@ -13,23 +13,33 @@
     <string name="transition_share_photo">transition:PHOTO</string>
 
 
+    <!-- toolbar title -->
     <string name="app_login">Login</string>
     <string name="app_regist">Regist</string>
 
 
 
+    <!-- guide -->
     <string name="guide_msg">欢迎您的使用\n哈哈哈</string>
     <string name="login">登录</string>
     <string name="regist">注册</string>
 
 
+    <!-- 登录 -->
     <string name="user_login_name_hint">UserName or Email</string>
     <string name="user_login_name_error_null">UserName or Email is null</string>
     <string name="user_login_password_hint">Passowrd</string>
     <string name="user_login_password_error_null">password is null</string>
 
 
+    <!-- 主页 -->
+    <string name="mian_left_menu_favourites">FAVOURITES</string>
+    <string name="mian_left_menu_follow">FOLLOW</string>
+    <string name="mian_left_menu_feedback">FEEDBACK</string>
+    <string name="mian_left_menu_setting">SETTING</string>
 
+
+    <!-- progress msg -->
     <string name="progress_msg_default">Loading, Please wait...</string>
     <string name="progress_msg_login">User Logining, Please wait...</string>
 

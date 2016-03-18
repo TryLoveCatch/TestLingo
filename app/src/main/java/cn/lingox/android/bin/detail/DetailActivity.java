@@ -21,7 +21,7 @@ import java.util.Date;
 import java.util.List;
 
 import butterknife.Bind;
-import cn.lingox.android.R;
+import cn.lingox.android.test.R;
 import cn.lingox.android.bin.detail.view.DetailHView;
 import cn.lingox.android.bin.detail.view.DetailTitleHView;
 import cn.lingox.android.framework.BaseActivity;

@@ -15,7 +15,7 @@ import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import cn.lingox.android.R;
+import cn.lingox.android.test.R;
 import cn.lingox.android.share.view.EmptyView;
 import cn.lingox.android.share.view.PhoneProgressDialog;
 import cn.lingox.android.util.T;

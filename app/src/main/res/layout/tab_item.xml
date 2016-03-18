@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dip"
+    android:paddingBottom="5dip"
+    android:gravity="center"
+    android:orientation="vertical"
+    >
+    <RelativeLayout
+        android:id="@+id/tab_item_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_26"
+        >
+
+        <ImageView
+            android:id="@+id/tab_item_img"
+            android:layout_width="match_parent"
+            android:layout_height="18dip"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dip"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tab_item_txt_number"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:gravity="top"
+            android:textColor="#616161"
+            android:textSize="17sp"
+            android:includeFontPadding="false"
+            android:text="0"
+            android:visibility="invisible"
+            />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tab_item_txt_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        android:gravity="center"
+        android:textColor="#616161"
+        android:textSize="14sp" />
+</LinearLayout>

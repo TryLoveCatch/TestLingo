@@ -17,23 +17,11 @@ import android.view.View;
 
 import butterknife.Bind;
 import cn.lingox.android.bin.home.HomeFragment;
-import cn.lingox.android.bin.meizi.MeiziFragment;
-import cn.lingox.android.bin.api.Apis;
-import cn.lingox.android.bin.text.TextFragment;
-import cn.lingox.android.bin.video.VideoFragment;
 import cn.lingox.android.framework.BaseActivity;
 import cn.lingox.android.framework.IToolbarAndFab;
-import cn.lingox.android.util.Constant;
+import cn.lingox.android.test.R;
 
 public class MainActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener {
-    private final static int INDEX_HOME = 0;
-    private final static int INDEX_MEIZI = 1;
-    private final static int INDEX_ANDROID = 2;
-    private final static int INDEX_IOS = 3;
-    private final static int INDEX_RECOMMEND = 4;
-    private final static int INDEX_EXPAND = 5;
-    private final static int INDEX_VIDEO = 6;
-    private final static int INDEX_APP = 7;
 
     //===============界面变量==============
     @Bind(R.id.toolbar)
@@ -67,17 +55,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-//        else (id == android.R.id.home){
-//            if(mDrawerLayout.isDrawerOpen(Gravity.LEFT)){
-//                mDrawerLayout.closeDrawers();
-//            }else{
-//                mDrawerLayout.setdraw
-//            }
-//        }
         switch (id){
             case R.id.action_settings:
                 return true;
@@ -140,39 +118,21 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
     @Override
     public void initData() {
-        mIndex = INDEX_HOME;
+
     }
 
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         switch (item.getItemId()){
-            case R.id.item_home:
-                mIndex = INDEX_HOME;
+            case R.id.item_favourites:
                 break;
-            case R.id.item_meizi:
-                mIndex = INDEX_MEIZI;
+            case R.id.item_follow:
                 break;
-            case R.id.item_android:
-                mIndex = INDEX_ANDROID;
+            case R.id.item_feedback:
                 break;
-            case R.id.item_ios:
-                mIndex = INDEX_IOS;
-                break;
-            case R.id.item_expand:
-                mIndex = INDEX_EXPAND;
-                break;
-            case R.id.item_recommend:
-                mIndex = INDEX_RECOMMEND;
-                break;
-            case R.id.item_video:
-                mIndex = INDEX_VIDEO;
-                break;
-            case R.id.item_app:
-                mIndex = INDEX_APP;
+            case R.id.item_setting:
                 break;
         }
-        switchFragment();
-        item.setCheckable(true);
         mDrawerLayout.closeDrawers();
         return true;
     }
@@ -184,45 +144,9 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     }
 
     private void fillView(){
-        switchFragment();
+        setContentFragment(HomeFragment.class);
     }
 
-    private void switchFragment(){
-        Bundle tData = new Bundle();
-        switch (mIndex){
-            case INDEX_HOME:
-                setContentFragment(HomeFragment.class);
-                break;
-            case INDEX_MEIZI:
-                setContentFragment(MeiziFragment.class);
-                break;
-            case INDEX_ANDROID:
-                tData.putString(Constant.EXTRA_TYPE, Apis.type_android);
-                setContentFragment(TextFragment.class, tData);
-                break;
-            case INDEX_IOS:
-                tData.putString(Constant.EXTRA_TYPE, Apis.type_ios);
-                setContentFragment(TextFragment.class, tData);
-                break;
-            case INDEX_EXPAND:
-                tData.putString(Constant.EXTRA_TYPE, Apis.type_expand);
-                setContentFragment(TextFragment.class, tData);
-                break;
-            case INDEX_RECOMMEND:
-                tData.putString(Constant.EXTRA_TYPE, Apis.type_recommend);
-                setContentFragment(TextFragment.class, tData);
-                break;
-            case INDEX_APP:
-                tData.putString(Constant.EXTRA_TYPE, Apis.type_app);
-                setContentFragment(TextFragment.class, tData);
-                break;
-            case INDEX_VIDEO:
-                tData.putString(Constant.EXTRA_TYPE, Apis.type_video);
-                setContentFragment(VideoFragment.class, tData);
-                break;
-
-        }
-    }
 
     private void showExitDialog(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);

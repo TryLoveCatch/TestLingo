@@ -1,5 +1,6 @@
 package cn.lingox.android.bin.user;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.view.LayoutInflater;
@@ -10,10 +11,11 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 
 import butterknife.Bind;
-import cn.lingox.android.R;
+import cn.lingox.android.MainActivity;
 import cn.lingox.android.framework.BaseFragment;
 import cn.lingox.android.framework.event.EventBus;
 import cn.lingox.android.share.event.EventUserLogin;
+import cn.lingox.android.test.R;
 import cn.lingox.android.util.UtilString;
 
 public class UserLoginFragment extends BaseFragment implements View.OnClickListener {
@@ -87,6 +89,8 @@ public class UserLoginFragment extends BaseFragment implements View.OnClickListe
         hideProgress();
         if(pData.data!=null){
             showToast("Login success");
+            Intent tIntent = new Intent(getContext(), MainActivity.class);
+            startActivity(tIntent);
         }else{
             if(UtilString.isNotBlank(pData.resultMsg)){
                 showToast(pData.resultMsg);

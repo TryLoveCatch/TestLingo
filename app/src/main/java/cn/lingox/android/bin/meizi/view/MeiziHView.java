@@ -12,7 +12,7 @@ import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
 
 import butterknife.Bind;
-import cn.lingox.android.R;
+import cn.lingox.android.test.R;
 import cn.lingox.android.dao.InfoDaoMeizi;
 import cn.lingox.android.framework.data.InfoBase;
 import cn.lingox.android.framework.event.EventBus;

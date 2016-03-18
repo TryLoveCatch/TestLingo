@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import cn.lingox.android.R;
+import cn.lingox.android.test.R;
 import cn.lingox.android.util.UtilString;
 
 /**

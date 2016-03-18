@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
-import cn.lingox.android.R;
+import cn.lingox.android.test.R;
 import cn.lingox.android.bin.api.Apis;
 import cn.lingox.android.framework.BaseFragment;
 import cn.lingox.android.framework.IToolbarAndFab;

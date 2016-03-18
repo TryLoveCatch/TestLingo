@@ -32,6 +32,7 @@ import java.util.Comparator;
 import butterknife.Bind;
 import butterknife.OnClick;
 import cn.lingox.android.framework.BaseActivity;
+import cn.lingox.android.test.R;
 import cn.lingox.android.util.UtilManager;
 
 public class ConsoleActivity extends BaseActivity {

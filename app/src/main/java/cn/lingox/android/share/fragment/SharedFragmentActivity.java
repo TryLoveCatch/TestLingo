@@ -12,7 +12,7 @@ import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 
-import cn.lingox.android.R;
+import cn.lingox.android.test.R;
 import cn.lingox.android.framework.BaseActivity;
 import cn.lingox.android.framework.BaseFragment;
 

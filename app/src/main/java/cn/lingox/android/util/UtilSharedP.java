@@ -45,15 +45,6 @@ public class UtilSharedP {
 	public String getUserName() {
 	    return sp.getString("userName", "");
 	}
-	// 用户名
-	public void setNickName(String pNickName) {
-		editor.putString("nickName", pNickName);
-		editor.commit();
-	}
-	
-	public String getNickName() {
-		return sp.getString("nickName", "");
-	}
 	
 	// 密码
 	public void setUserPassword(String pUserPassword) {

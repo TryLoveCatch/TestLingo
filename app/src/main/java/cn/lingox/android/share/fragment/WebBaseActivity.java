@@ -12,7 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import butterknife.Bind;
-import cn.lingox.android.R;
+import cn.lingox.android.test.R;
 import cn.lingox.android.framework.BaseActivity;
 import cn.lingox.android.util.Constant;
 import cn.lingox.android.util.UtilString;

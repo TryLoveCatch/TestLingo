@@ -11,7 +11,7 @@ import android.webkit.WebViewClient;
 import android.widget.RelativeLayout;
 
 import butterknife.Bind;
-import cn.lingox.android.R;
+import cn.lingox.android.test.R;
 import cn.lingox.android.framework.BaseFragment;
 import cn.lingox.android.util.Constant;
 import cn.lingox.android.util.UtilManager;

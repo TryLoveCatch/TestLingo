@@ -18,7 +18,7 @@ import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import cn.lingox.android.R;
+import cn.lingox.android.test.R;
 import cn.lingox.android.application.MyApplication;
 import cn.lingox.android.application.OnNetChangeListener;
 import cn.lingox.android.share.view.EmptyView;

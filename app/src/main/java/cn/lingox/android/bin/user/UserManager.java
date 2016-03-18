@@ -7,6 +7,7 @@ import cn.lingox.android.bin.api.ApiManager;
 import cn.lingox.android.bin.user.info.InfoUser;
 import cn.lingox.android.framework.event.EventBus;
 import cn.lingox.android.share.event.EventUserLogin;
+import cn.lingox.android.util.UtilManager;
 import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action1;
@@ -35,7 +36,7 @@ public class UserManager {
         }
         return mInstatnce;
     }
-    public Subscription login(String pUserNameOrEmail, String pPassword){
+    public Subscription login(final String pUserNameOrEmail, final String pPassword){
 //        Map<String, String> params = new HashMap<>();
 //        params.put(emailOrUsernameStr, pUserNameOrEmail);
 //        params.put(passwordStr, pPassword);
@@ -52,6 +53,8 @@ public class UserManager {
                             EventBus.post(new EventUserLogin(false, infoUser.remark));
                         }else {
                             mInfoUser = infoUser;
+                            UtilManager.getInstance().mUtilSharedP.setUserName(pUserNameOrEmail);
+                            UtilManager.getInstance().mUtilSharedP.setUserPassword(pPassword);
                             EventBus.post(new EventUserLogin(infoUser));
                         }
                     }

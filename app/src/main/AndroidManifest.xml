@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="cn.lingox.android" >
+    package="cn.lingox.android.test" >
 
 
 
@@ -14,7 +14,7 @@
     <uses-permission  android:name="android.permission.CHANGE_CONFIGURATION" />
 
     <application
-        android:name=".application.MyApplication"
+        android:name="cn.lingox.android.application.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -22,7 +22,7 @@
         android:theme="@style/AppTheme.NoActionBar" >
 
         <activity
-            android:name=".FirstActivity"
+            android:name="cn.lingox.android.FirstActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,33 +31,33 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".bin.guide.GuideActivity"
+            android:name="cn.lingox.android.bin.guide.GuideActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden"
             >
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="cn.lingox.android.MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden"
             >
         </activity>
         <activity
-            android:name=".share.fragment.SharedFragmentActivity"
+            android:name="cn.lingox.android.share.fragment.SharedFragmentActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden" >
         </activity>
         <activity
-            android:name=".share.fragment.WebBaseActivity"
+            android:name="cn.lingox.android.share.fragment.WebBaseActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden" >
         </activity>
         <activity
-            android:name=".ConsoleActivity"
+            android:name="cn.lingox.android.ConsoleActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:exported="true"
             android:launchMode="singleTask"

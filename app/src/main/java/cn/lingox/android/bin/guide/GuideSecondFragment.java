@@ -5,7 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import cn.lingox.android.R;
+import cn.lingox.android.test.R;
 
 /**
  * Created with Android Studio.

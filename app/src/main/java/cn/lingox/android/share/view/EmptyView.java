@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import cn.lingox.android.R;
+import cn.lingox.android.test.R;
 
 public class EmptyView extends LinearLayout {
     private String topText;

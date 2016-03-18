@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
-import cn.lingox.android.R;
+import cn.lingox.android.test.R;
 
 /**
  * Created with Android Studio.

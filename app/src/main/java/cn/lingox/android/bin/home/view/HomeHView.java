@@ -11,7 +11,7 @@ import com.squareup.picasso.Picasso;
 import java.text.SimpleDateFormat;
 
 import butterknife.Bind;
-import cn.lingox.android.R;
+import cn.lingox.android.test.R;
 import cn.lingox.android.dao.InfoDaoHome;
 import cn.lingox.android.framework.data.InfoBase;
 import cn.lingox.android.framework.event.EventBus;

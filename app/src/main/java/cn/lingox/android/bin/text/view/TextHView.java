@@ -7,7 +7,7 @@ import android.widget.TextView;
 import java.text.SimpleDateFormat;
 
 import butterknife.Bind;
-import cn.lingox.android.R;
+import cn.lingox.android.test.R;
 import cn.lingox.android.dao.InfoDaoMeizi;
 import cn.lingox.android.framework.data.InfoBase;
 import cn.lingox.android.framework.event.EventBus;

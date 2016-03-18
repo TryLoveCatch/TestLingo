@@ -10,7 +10,7 @@ import android.view.View;
 
 import java.util.List;
 
-import cn.lingox.android.R;
+import cn.lingox.android.test.R;
 import cn.lingox.android.bin.detail.DetailActivity;
 import cn.lingox.android.bin.home.view.HomeHView;
 import cn.lingox.android.dao.InfoDaoHome;

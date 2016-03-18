@@ -4,7 +4,7 @@ import android.content.Context;
 import android.widget.TextView;
 
 import butterknife.Bind;
-import cn.lingox.android.R;
+import cn.lingox.android.test.R;
 import cn.lingox.android.bin.detail.InfoDetailTitle;
 import cn.lingox.android.framework.data.InfoBase;
 import cn.lingox.android.framework.view.BaseHolderView;

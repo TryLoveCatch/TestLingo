@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 
 import butterknife.Bind;
-import cn.lingox.android.R;
+import cn.lingox.android.test.R;
 import cn.lingox.android.bin.user.UserLoginFragment;
 import cn.lingox.android.framework.BaseActivity;
 import cn.lingox.android.share.fragment.SharedFragmentActivity;

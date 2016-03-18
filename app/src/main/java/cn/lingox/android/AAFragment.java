@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 
 import cn.lingox.android.framework.BaseFragment;
 import cn.lingox.android.framework.event.EventBus;
+import cn.lingox.android.test.R;
 
 public class AAFragment extends BaseFragment{
     

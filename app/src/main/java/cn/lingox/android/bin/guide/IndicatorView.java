@@ -11,7 +11,7 @@ import android.widget.LinearLayout;
 import java.util.ArrayList;
 import java.util.List;
 
-import cn.lingox.android.R;
+import cn.lingox.android.test.R;
 
 /**
  * Created by lipeng21 on 2016/3/11.
