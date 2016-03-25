@@ -8,7 +8,7 @@ import com.litesuits.orm.LiteOrm;
  * Created by lipeng21 on 2015/11/13.
  */
 public class DaoManager {
-    private final static String DB_NAME = "ganhuo";
+    private final static String DB_NAME = "lingo";
     private static DaoManager mInstance;
     public LiteOrm mOrm;
     private DaoManager(){

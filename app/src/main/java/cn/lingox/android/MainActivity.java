@@ -17,6 +17,7 @@ import android.view.View;
 
 import butterknife.Bind;
 import cn.lingox.android.bin.home.HomeFragment;
+import cn.lingox.android.bin.home.HomeTabFragment;
 import cn.lingox.android.framework.BaseActivity;
 import cn.lingox.android.framework.IToolbarAndFab;
 import cn.lingox.android.test.R;
@@ -144,7 +145,8 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     }
 
     private void fillView(){
-        setContentFragment(HomeFragment.class);
+//        setContentFragment(HomeFragment.class);
+        setContentFragment(HomeTabFragment.class);
     }
 
 

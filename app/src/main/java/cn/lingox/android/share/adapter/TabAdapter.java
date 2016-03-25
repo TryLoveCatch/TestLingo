@@ -3,7 +3,6 @@ package cn.lingox.android.share.adapter;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.PagerAdapter;
 
 import java.util.ArrayList;
 
@@ -29,8 +28,9 @@ public class TabAdapter extends FragmentPagerAdapter  {
 		return mFragmentList.get(position);
 	}
 
+	//自定义Tab的时候
 	@Override
-	public int getItemPosition(Object object) {
-		return PagerAdapter.POSITION_NONE;
+	public CharSequence getPageTitle(int position) {
+		return null;
 	}
 }

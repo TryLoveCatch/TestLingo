@@ -5,6 +5,7 @@ import java.util.Map;
 
 import cn.lingox.android.bin.api.ApiManager;
 import cn.lingox.android.bin.user.info.InfoUser;
+import cn.lingox.android.bin.user.info.InfoUserRsp;
 import cn.lingox.android.framework.event.EventBus;
 import cn.lingox.android.share.event.EventUserLogin;
 import cn.lingox.android.util.UtilManager;
@@ -44,18 +45,18 @@ public class UserManager {
         return ApiManager.getInstance().mApis.login(pUserNameOrEmail, pPassword)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Action1<InfoUser>() {
+                .subscribe(new Action1<InfoUserRsp>() {
                     @Override
-                    public void call(InfoUser infoUser) {
-                        if(infoUser==null){
+                    public void call(InfoUserRsp infoUserRsp) {
+                        if(infoUserRsp==null){
                             EventBus.post(new EventUserLogin(false, "null"));
-                        }else if(infoUser.code != InfoUser.CODE_SUC){
-                            EventBus.post(new EventUserLogin(false, infoUser.remark));
+                        }else if(infoUserRsp.code != InfoUserRsp.CODE_SUC){
+                            EventBus.post(new EventUserLogin(false, infoUserRsp.remark));
                         }else {
-                            mInfoUser = infoUser;
+                            mInfoUser = infoUserRsp.results;
                             UtilManager.getInstance().mUtilSharedP.setUserName(pUserNameOrEmail);
                             UtilManager.getInstance().mUtilSharedP.setUserPassword(pPassword);
-                            EventBus.post(new EventUserLogin(infoUser));
+                            EventBus.post(new EventUserLogin(mInfoUser));
                         }
                     }
                 }, new Action1<Throwable>() {

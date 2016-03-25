@@ -32,11 +32,16 @@
     <string name="user_login_password_error_null">password is null</string>
 
 
-    <!-- 主页 -->
+    <!-- main -->
+    <!--left menu -->
     <string name="mian_left_menu_favourites">FAVOURITES</string>
     <string name="mian_left_menu_follow">FOLLOW</string>
     <string name="mian_left_menu_feedback">FEEDBACK</string>
     <string name="mian_left_menu_setting">SETTING</string>
+
+    <!-- home -->
+    <string name="home_tab_local">LOCAL EXPERIENCES</string>
+    <string name="home_tab_traveler">TRAVELER REQUESTS</string>
 
 
     <!-- progress msg -->

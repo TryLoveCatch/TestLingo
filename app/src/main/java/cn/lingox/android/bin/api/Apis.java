@@ -1,8 +1,9 @@
 package cn.lingox.android.bin.api;
 
 import cn.lingox.android.bin.detail.InfoDetail;
+import cn.lingox.android.bin.local.info.InfoLocalListRsp;
 import cn.lingox.android.bin.meizi.info.InfoMeiziData;
-import cn.lingox.android.bin.user.info.InfoUser;
+import cn.lingox.android.bin.user.info.InfoUserRsp;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
@@ -16,8 +17,15 @@ import rx.Observable;
 public interface Apis {
 
     int PAGESIZE = 20;
-    String emailOrUsernameStr = "emailOrUsername";
-    String passwordStr = "password";
+
+    String page = "page";
+    String ver = "ver";
+
+
+    String emailOrUsername = "emailOrUsername";
+    String password = "password";
+
+
 
     String type_meizi = "福利";
     String type_video = "休息视频";
@@ -43,8 +51,17 @@ public interface Apis {
 
 
 
+    //==============================user start=====================================
+    //用户登录
     @FormUrlEncoded
     @POST("api/v1/users/login")
-    Observable<InfoUser> login(@Field(emailOrUsernameStr)String  emailOrUsername
-                    , @Field(passwordStr)String  password);
+    Observable<InfoUserRsp> login(@Field("emailOrUsername")String emailOrUsername , @Field("password")String password);
+    //==============================user end=====================================
+
+    //==============================home start=====================================
+    //获取local experiences数据
+    @FormUrlEncoded
+    @POST("Path/getAllPaths")
+    Observable<InfoLocalListRsp> loadLocalList(@Field("ver")String ver , @Field("page")String page);
+    //==============================home end=====================================
 }
