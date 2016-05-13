@@ -7,12 +7,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.squareup.picasso.Picasso;
-
 import java.text.SimpleDateFormat;
 
 import butterknife.Bind;
 import cn.lingox.android.bin.local.info.InfoLocal;
+import cn.lingox.android.framework.cache.ImgLoader;
 import cn.lingox.android.framework.data.InfoBase;
 import cn.lingox.android.framework.event.EventBus;
 import cn.lingox.android.framework.view.BaseHolderView;
@@ -54,10 +53,12 @@ public class LocalHView extends BaseHolderView{
         mTxtTitle.setText(tInfo.title);
         mTxtTime.setText(mSdf.format(tInfo.createdAt));
 
-        Picasso.with(mContext)
-                .load(tInfo.image21)
-                .placeholder(R.drawable.ic_img_default)
-                .into(mImg);
+//        Picasso.with(mContext)
+//                .load(tInfo.image21)
+//                .placeholder(R.drawable.ic_img_default)
+//                .into(mImg);
+        ImgLoader.getImgLoader(mContext)
+                .displayImage(mImg, tInfo.image21, R.drawable.ic_img_default);
 
         mRoot.setOnClickListener(new View.OnClickListener() {
             @Override

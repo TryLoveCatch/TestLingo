@@ -14,12 +14,19 @@ import cn.lingox.android.framework.data.InfoBase;
  */
 public class BaseAdapter extends RecyclerView.Adapter<BaseHolderView>{
 
+    private final static int TYPE_FOOTER = 100;
+
     private Context mContext;
     private Class<? extends BaseHolderView>[] mHolderViews;
     private List<? extends InfoBase> mArrData;
 
+    private boolean mHasFooter;
+    private boolean mIsHasMore;
+
     public BaseAdapter(Context pContext){
         this.mContext = pContext;
+        mHasFooter = true;
+        mIsHasMore = true;
     }
 
     public BaseAdapter setHolderViews(Class<? extends BaseHolderView>... pHolderViews){
@@ -32,11 +39,22 @@ public class BaseAdapter extends RecyclerView.Adapter<BaseHolderView>{
         return this;
     }
 
+    public void setIsHasMore(boolean pIsHasMore){
+        this.mIsHasMore = pIsHasMore;
+    }
+
+    public void setIsHasFooter(boolean pHasFooter){
+        this.mHasFooter = pHasFooter;
+    }
+
     @Override
     public BaseHolderView onCreateViewHolder(ViewGroup parent, int viewType) {
         try {
+            if (viewType == TYPE_FOOTER) {
+                return new FooterViewHolder(mContext);
+            }
             return (BaseHolderView) this.mHolderViews[viewType].getConstructor(Context.class)
-                    .newInstance(this.mContext);
+                        .newInstance(this.mContext);
         } catch (InstantiationException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {
@@ -51,16 +69,30 @@ public class BaseAdapter extends RecyclerView.Adapter<BaseHolderView>{
 
     @Override
     public void onBindViewHolder(BaseHolderView holder, int position) {
-        holder.bindData(getItem(position), position);
+        if(mHasFooter && position!=0 && position == mArrData.size()){
+            ((FooterViewHolder)holder).bindData(mIsHasMore);
+        }else {
+            holder.bindData(getItem(position), position);
+        }
     }
 
     @Override
     public int getItemCount() {
-        return mArrData != null ? mArrData.size() : 0;
+        if(mArrData!=null){
+            if(mHasFooter && mArrData.size()!=0){
+                return mArrData.size() + 1;
+            }
+            return mArrData.size();
+        }else {
+            return 0;
+        }
     }
 
     @Override
     public int getItemViewType(int position) {
+        if(mHasFooter && position!=0 && position == mArrData.size()){
+            return TYPE_FOOTER;
+        }
         return super.getItemViewType(position);
     }
 

@@ -44,6 +44,7 @@ public abstract class RecylerFragment extends BaseFragment implements SwipeRefre
     private boolean mIsLoadMore;
     private boolean mIsRefresh;
     private boolean mIsSmooth;
+    private boolean mIsTab;//是否是tab的
     //===============生命周期==============
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -54,41 +55,17 @@ public abstract class RecylerFragment extends BaseFragment implements SwipeRefre
     public void onResume() {
         super.onResume();
 
-        try {
-            EventBus.register(this);
-        }catch (Exception e){}
-
-        if(!mIsResumed) {
-            mIsResumed = true;
-            //加载db缓存
-            List<? extends InfoBase> tArr = loadDB();
-            if(isListValid(tArr)) {
-                mArrData.addAll(tArr);
-                mAdp.notifyDataSetChanged();
-            }
-
-            if(isListValid(mArrData)) {
-                setRefreshing(true, 300);
-                mRcl.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        refresh();
-                    }
-                }, 1000);
-            }else{
-                showEmptyView(mSwp, TYPE_LOADING);
-                refresh();
-            }
-
+        if(!mIsTab){
+            resume();
         }
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        try {
-            EventBus.unregister(this);
-        }catch (Exception e){}
+        if(!mIsTab){
+            pause();
+        }
     }
 
     @Override
@@ -100,6 +77,20 @@ public abstract class RecylerFragment extends BaseFragment implements SwipeRefre
     public void onDestroy() {
         clear();
         super.onDestroy();
+    }
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        if(isVisibleToUser){
+            if(mIsTab){
+                resume();
+            }
+        }else{
+            if(mIsTab){
+                pause();
+            }
+        }
     }
 
     //===============事件接口==============
@@ -135,18 +126,11 @@ public abstract class RecylerFragment extends BaseFragment implements SwipeRefre
 
                 int tItemCount = mAdp.getItemCount();
 //                L.e("tLastVisibleItem," + tLastVisibleItem + " tItemCount," + tItemCount + " mPage," + mPage + " mIsAll," + mIsAll);
-                if(tLastVisibleItem >= tItemCount - 1){
 
-                    if(mIsAll){
-                        showToast("没有更多内容了");
-                        return;
-                    }
-
-                    if(!mIsLoadMore && !mIsRefresh && !mSwp.isRefreshing()) {
-                        mIsLoadMore = true;
-                        mPage++;
-                        loadData();
-                    }
+                if(!mIsLoadMore && !mIsRefresh && !mSwp.isRefreshing() && !mIsAll && tLastVisibleItem >= tItemCount - 1) {
+                    mIsLoadMore = true;
+                    mPage++;
+                    loadData();
                 }
 
                 //滚动
@@ -258,6 +242,7 @@ public abstract class RecylerFragment extends BaseFragment implements SwipeRefre
 
         if (pArrInfos.size() < Apis.PAGESIZE) {
             mIsAll = true;
+            mAdp.setIsHasMore(false);
         }
 
         if(mIsRefresh){
@@ -314,6 +299,42 @@ public abstract class RecylerFragment extends BaseFragment implements SwipeRefre
                 mSwp.setRefreshing(pRefreshing);
             }
         }, pDelayMillis);
+    }
+
+    private void resume(){
+        try {
+            EventBus.register(this);
+        }catch (Exception e){}
+
+        if(!mIsResumed) {
+            mIsResumed = true;
+            //加载db缓存
+            List<? extends InfoBase> tArr = loadDB();
+            if(isListValid(tArr)) {
+                mArrData.addAll(tArr);
+                mAdp.notifyDataSetChanged();
+            }
+
+            if(isListValid(mArrData)) {
+                setRefreshing(true, 300);
+                mRcl.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        refresh();
+                    }
+                }, 1000);
+            }else{
+                showEmptyView(mSwp, TYPE_LOADING);
+                refresh();
+            }
+
+        }
+    }
+
+    private void pause(){
+        try {
+            EventBus.unregister(this);
+        }catch (Exception e){}
     }
 
 

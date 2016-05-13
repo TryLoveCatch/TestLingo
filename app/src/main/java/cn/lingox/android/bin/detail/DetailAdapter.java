@@ -15,6 +15,8 @@ public class DetailAdapter extends BaseAdapter{
 
     @Override
     public int getItemViewType(int position) {
+        int tType = super.getItemViewType(position);
+        if(tType > 0) return tType;
         if(getItem(position) instanceof InfoDetailTitle){
             return 0;
         }else{

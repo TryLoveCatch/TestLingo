@@ -47,6 +47,8 @@
     <!-- progress msg -->
     <string name="progress_msg_default">Loading, Please wait...</string>
     <string name="progress_msg_login">User Logining, Please wait...</string>
+    <string name="progress_loading">Loading…</string>
+    <string name="no_more_data">No more data</string>
 
 
 </resources>

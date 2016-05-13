@@ -5,13 +5,14 @@ import android.support.v4.app.Fragment;
 import java.util.ArrayList;
 
 import cn.lingox.android.bin.local.LocalFragment;
+import cn.lingox.android.bin.traveler.TravelerFragment;
 import cn.lingox.android.share.fragment.TabFragment;
 import cn.lingox.android.test.R;
 
 public class HomeTabFragment extends TabFragment{
     //===============界面变量==============
     private LocalFragment mFrgLocal;
-    private HomeFragment mFrgHome2;
+    private TravelerFragment mFrgTraveler;
     //===============逻辑变量==============
     //===============生命周期==============
     
@@ -20,9 +21,9 @@ public class HomeTabFragment extends TabFragment{
     protected ArrayList<Fragment> beforeLoadData() {
         ArrayList<Fragment> tListFrgs = new ArrayList<>();
         mFrgLocal = new LocalFragment();
-        mFrgHome2 = new HomeFragment();
+        mFrgTraveler = new TravelerFragment();
         tListFrgs.add(mFrgLocal);
-        tListFrgs.add(mFrgHome2);
+        tListFrgs.add(mFrgTraveler);
         return tListFrgs;
     }
 

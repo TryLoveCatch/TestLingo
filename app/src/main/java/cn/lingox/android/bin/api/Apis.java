@@ -3,6 +3,7 @@ package cn.lingox.android.bin.api;
 import cn.lingox.android.bin.detail.InfoDetail;
 import cn.lingox.android.bin.local.info.InfoLocalListRsp;
 import cn.lingox.android.bin.meizi.info.InfoMeiziData;
+import cn.lingox.android.bin.traveler.info.InfoTravelerListRsp;
 import cn.lingox.android.bin.user.info.InfoUserRsp;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
@@ -63,5 +64,14 @@ public interface Apis {
     @FormUrlEncoded
     @POST("Path/getAllPaths")
     Observable<InfoLocalListRsp> loadLocalList(@Field("ver")String ver , @Field("page")String page);
+
+    //获取traveler requests数据
+    @FormUrlEncoded
+    @POST("demand/getAllDemands")
+    Observable<InfoTravelerListRsp> loadTravelerList(@Field("page")String page
+            , @Field("country")String country , @Field("province")String province
+            , @Field("city")String city);
+
+
     //==============================home end=====================================
 }

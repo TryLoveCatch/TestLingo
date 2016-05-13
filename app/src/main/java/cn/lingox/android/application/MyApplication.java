@@ -4,6 +4,7 @@ import android.app.Application;
 import android.content.Context;
 
 import cn.lingox.android.dao.DaoManager;
+import cn.lingox.android.test.BuildConfig;
 import cn.lingox.android.util.L;
 import cn.lingox.android.util.UtilManager;
 import de.greenrobot.event.EventBus;
@@ -62,28 +63,13 @@ public class MyApplication extends Application{
             return;
 		MyApplication.mIsInited = true;
 		MyApplication.mContext = getApplicationContext();
+		L.isDebug = BuildConfig.DEBUG;
 		//初始化
 		UtilManager.getInstance().init(this);
-		//数据库
-		initDB();
 
 		//网络监听
 		mNetCheck = new NetCheckReceiver(this);
 		mNetCheck.register();
-		
-//		if(UtilManager.getInstance().mUtilPhone.getSystemVersion() >= 14){
-//			StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
-//			.detectDiskReads()
-//			.detectDiskWrites()
-//			.detectNetwork() // 这里可以替换为detectAll() 就包括了磁盘读写和网络I/O
-//			.penaltyLog() //打印logcat，当然也可以定位到dropbox，通过文件保存相应的log
-//			.build());
-//			StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder()
-//			.detectLeakedSqlLiteObjects() //探测SQLite数据库操作
-//			.penaltyLog() //打印logcat
-//			.penaltyDeath()
-//			.build()); 
-//		}
 	}
 	/**
 	 * bug收集
